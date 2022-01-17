@@ -1,0 +1,16 @@
+<VirtualHost 127.0.0.123:80>
+ DocumentRoot "C:\Users\keck\Desktop\proyectos web\LaravelProjects\cine\public"
+ DirectoryIndex index.php
+ <Directory "C:\Users\keck\Desktop\proyectos web\LaravelProjects\cine\public">
+Options All
+AllowOverride All
+Require all granted
+ </Directory>
+</VirtualHost>
+
+
+127.0.0.123     cine
+
+
+
+C:\Windows\System32\drivers....
