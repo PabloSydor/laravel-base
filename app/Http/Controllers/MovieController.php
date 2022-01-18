@@ -25,7 +25,7 @@ class MovieController extends Controller
      */
     public function create()
     {
-        //
+        return view('Movies.create');
     }
 
     /**
@@ -36,8 +36,17 @@ class MovieController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        $movie = new Movie();
+        // $movie['id'] = 100;
+        $movie['title'] = $request['title'];
+        $movie['year'] = $request['year'];
+        $movie['director'] = $request['director'];
+        $movie['picture'] = $request['picture'];
+
+        $movie->save();
+        return redirect()->route('movies');
+
+        }
 
     /**
      * Display the specified resource.
@@ -58,9 +67,11 @@ class MovieController extends Controller
      * @param  \App\Models\Movie  $movie
      * @return \Illuminate\Http\Response
      */
-    public function edit(Movie $movie)
+    public function edit($id)
     {
-        //
+        $movie = Movie::findOrFail($id);
+
+        return view('Movies.edit-movie', compact('movie'));
     }
 
     /**
@@ -70,9 +81,19 @@ class MovieController extends Controller
      * @param  \App\Models\Movie  $movie
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Movie $movie)
+    public function update(Request $request, $id)
     {
-        //
+        $movie = Movie::findOrFail($id);
+        // return $request->all();
+        $movie['title'] = $request['title'];
+        $movie['year'] = $request['year'];
+        $movie['director'] = $request['director'];
+        $movie['picture'] = $request['picture'];
+
+
+        $movie->save();
+        return view('Movies.movie', compact('movie'));
+
     }
 
     /**
@@ -81,13 +102,37 @@ class MovieController extends Controller
      * @param  \App\Models\Movie  $movie
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Movie $movie)
-    {
-        $movie = Movie::findOrFail($movie->id);
+    // public function destroy(Movie $movie)
+    // {
+    //     $movie = Movie::findOrFail($movie->id);
+    //     $movie->delete();
+    //     // return redirect()->route('movies');
+    //     return redirect('movies');
+    // }
+
+
+
+    // public function destroy(Movie $movie) {
+    //     $movie->delete();
+
+    //     return redirect()->route('movies');
+    // }
+
+
+
+    public function destroy($id) {
+        $movie = Movie::findOrFail($id);
+        // $texto = $movie['title'] . " has been deleted succesfuly!" ;
+
         $movie->delete();
-        // return redirect()->route('movies');
-        return redirect('movies');
+
+        return redirect()->route('movies');
 
 
+        // return redirect()->route('movies', compact('texto'));
     }
+
+
+
+
 }

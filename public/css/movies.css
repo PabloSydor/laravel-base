@@ -85,3 +85,16 @@
     text-align: center;
     display: flex;
 } */
+
+
+
+/*
+<div class="insert">
+    <div class="panel">
+        <img class="panel-img" src="imgs/logo/insert.svg" alt=""> <span class="panel-text">New Movie</span>
+    </div>
+</div> */
+
+.panel-img {
+    width: 32px;
+}

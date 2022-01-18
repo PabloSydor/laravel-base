@@ -1,0 +1,137 @@
+
+
+.contenedora {
+    width: 80%;
+    margin-left: 10%;
+    background-color: rgb(67, 61, 94);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 36px;
+    border-radius: 12px;
+}
+
+.izquierda {
+    width: 35%;
+    padding: 24px;
+    display: grid;
+    text-align: center;
+}
+
+.derecha {
+    width: 80%;
+    display: table;
+    background-color: rgb(51, 46, 71);
+    /* margin-right: 72px; */
+    /* margin: 18px 72px 18px 0; */
+    margin-left: 10%;
+    margin-top: 12px;
+    margin-bottom: 48px;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.derechas {
+    width: 80%;
+    display: table;
+    /* padding-right: 100px; */
+    /* display: flex; */
+    /* justify-content: center; */
+    margin-left: 10%;
+    padding-top: 12px;
+}
+
+.imagen {
+    width: 360px;
+    margin-left: auto;
+    border-radius: 8px;
+    max-height: 500px;
+}
+
+.titulo {
+    width: 360px;
+    margin-left: auto;
+    margin-top: 24px;
+    color: rgb(0, 89, 255);
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+
+.tituloder {
+    color: rgb(182, 196, 202);
+    margin-top: 64px;
+    text-align: center;
+    /* width: 50%; */
+    /* margin-left: 25%; */
+}
+
+.form-label {
+    color: rgb(137, 160, 196);
+    /* color: rgb(61, 149, 165); */
+
+}
+
+
+.form-controld {
+    display: block;
+    width: 100%;
+    border: 1px solid rgb(61, 149, 165);
+    border-radius: 8px;
+    padding: 6px 8px;
+}
+
+.form-controld:valid {
+   background-color: rgb(67, 61, 94);
+   border-color: rgb(61, 149, 165);
+   color: rgb(61, 149, 165);
+}
+
+.form-controld:focus {
+    outline: none;
+    background-color: rgb(67, 61, 94);
+    border-color: rgb(61, 149, 165);
+    color: rgb(61, 149, 165);
+ }
+
+
+
+ .enviar {
+     transition: .7s;
+     text-align: center;
+     padding: 12px 24px;
+     color: rgb(38, 34, 54);
+     background-color: rgb(58, 158, 184);
+     border: none;
+     border-radius: 8px;
+     width: 30%;
+     margin-left: 35%;
+     margin-top: 24px;
+ }
+
+ .enviar:hover {
+     transition: .7s;
+    text-align: center;
+    padding: 12px 24px;
+    color: rgb(176, 209, 236);
+    background-color: rgb(20, 77, 92);
+    border: none;
+    border-radius: 8px;
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 24px;
+}
+
+.enviar:focus {
+    transition: .7s;
+    outline: none;
+}
+
+
+.c-new {
+    color: rgb(202, 202, 202);
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 24px;
+}
